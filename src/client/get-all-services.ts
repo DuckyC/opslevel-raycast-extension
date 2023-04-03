@@ -1,6 +1,7 @@
-import { graphql } from "../gql";
-export const GET_ALL_SERVICES = graphql(/* GraphQL */ `
-    query get_all_services($cursor: String) {
+import { gql } from "@apollo/client";
+
+export const GetAllServices = gql(/* GraphQL */ `
+    query GetAllServices($cursor: String) {
         account {
             servicesV2(after: $cursor) {
                 pageInfo {
